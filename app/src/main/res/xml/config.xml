@@ -1,0 +1,10 @@
+<accessibility-service
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:canRequestEnhancedWebAccessibility = "true"
+    android:notificationTimeout = "100"
+    android:canPerformGestures="true"
+    android:canRetrieveWindowContent ="true"
+    android:canRequestTouchExplorationMode = "true"
+    android:accessibilityEventTypes="typeViewClicked|typeViewFocused|typeWindowStateChanged|typeViewAccessibilityFocused|typeViewTextChanged|typeWindowsChanged|typeWindowContentChanged|typeNotificationStateChanged|typeTouchExplorationGestureStart|typeViewHoverEnter|typeViewHoverExit"
+    android:accessibilityFlags = "flagReportViewIds|flagRetrieveInteractiveWindows"
+    android:accessibilityFeedbackType="feedbackGeneric"/>
