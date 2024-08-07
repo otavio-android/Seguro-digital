@@ -47,7 +47,7 @@ class AutoClickService: AccessibilityService() {
     var num = 0
 
 
-    @SuppressLint("NewApi")
+    @SuppressLint("NewApi", "SuspiciousIndentation")
     suspend fun findNodeWithText(texto:String): Any? {
         Log.d("Brassec", "Veio pra find node.")
         var rootNode = rootInActiveWindow
