@@ -40,6 +40,7 @@ class MainActivity() : AppCompatActivity() {
 
 
              if (isAccessibilityEnabled() == false) {
+
                   serviceIntent = Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)
                   startActivityForResult(serviceIntent!!, PERMISSION_ACCESIBILITY)
               }
@@ -52,7 +53,6 @@ class MainActivity() : AppCompatActivity() {
                 }*/
 
               else {
-
                   var intent= Intent(applicationContext, SecondActivity::class.java)
                   startActivity(intent)
                   finish = 1

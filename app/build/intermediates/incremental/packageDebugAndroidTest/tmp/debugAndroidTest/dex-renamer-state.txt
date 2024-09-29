@@ -1,4 +1,4 @@
-#Wed Jun 05 21:54:10 BRT 2024
+#Tue Sep 17 18:17:21 BRT 2024
 base.0=C\:\\Users\\otavio g\\Documents\\Segurodigital2\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeExtDexDebugAndroidTest\\classes.dex
 base.1=C\:\\Users\\otavio g\\Documents\\Segurodigital2\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
 base.2=C\:\\Users\\otavio g\\Documents\\Segurodigital2\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\2\\classes.dex

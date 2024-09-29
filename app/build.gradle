@@ -7,13 +7,6 @@ android {
     namespace 'com.BrasSec'
     compileSdk 33
 
-    buildTypes {
-        release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'),"proguard-rules.pro"
-        }
-    }
-
     defaultConfig {
         applicationId "com.BrasSec"
         minSdk 24
@@ -29,10 +22,15 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            // Ativa a ofuscação e minimização de código
+            minifyEnabled true
+            // Ativa o shrinkResources para remover recursos não utilizados
+            shrinkResources true
+            // Define os arquivos ProGuard para ofuscação e otimização
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -52,12 +50,9 @@ android {
             excludes += 'META-INF/LICENSE.md'
         }
     }
-
-
 }
 
 dependencies {
-
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
     implementation 'androidx.activity:activity-compose:1.5.1'
