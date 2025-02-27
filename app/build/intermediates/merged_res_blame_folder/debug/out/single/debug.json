@@ -1,102 +1,114 @@
 [
     {
-        "merged": "com.BrasSec.app-merged_res-48:/drawable_logo_black4.png.flat",
-        "source": "com.BrasSec.app-main-50:/drawable/logo_black4.png"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/layout_instrucoes.xml.flat",
-        "source": "com.BrasSec.app-main-50:/layout/instrucoes.xml"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\layout_layout1.xml.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\layout\\layout1.xml"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/layout_layout1.xml.flat",
-        "source": "com.BrasSec.app-main-50:/layout/layout1.xml"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\layout_instrucoes.xml.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\layout\\instrucoes.xml"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/drawable_logo_antivirus.png.flat",
-        "source": "com.BrasSec.app-main-50:/drawable/logo_antivirus.png"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\drawable_logo_black5.png.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\drawable\\logo_black5.png"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/drawable_logo_black.png.flat",
-        "source": "com.BrasSec.app-main-50:/drawable/logo_black.png"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\drawable_logo_antivirus.png.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\drawable\\logo_antivirus.png"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.BrasSec.app-main-50:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.BrasSec.app-main-50:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.BrasSec.app-main-50:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/drawable_logo_black5.png.flat",
-        "source": "com.BrasSec.app-main-50:/drawable/logo_black5.png"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\xml_config.xml.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\xml\\config.xml"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.BrasSec.app-main-50:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\drawable_logo_black3.png.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\drawable\\logo_black3.png"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.BrasSec.app-main-50:/drawable/ic_launcher_background.xml"
+        "merged": "com.BrasSec.app-merged_res-48:/drawable_gta.png.flat",
+        "source": "com.BrasSec.app-main-50:/drawable/gta.png"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.BrasSec.app-main-50:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\drawable_store.png.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\drawable\\store.png"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/xml_config.xml.flat",
-        "source": "com.BrasSec.app-main-50:/xml/config.xml"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/drawable_logo_black3.png.flat",
-        "source": "com.BrasSec.app-main-50:/drawable/logo_black3.png"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\layout_layout_accessibility.xml.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\layout\\layout_accessibility.xml"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.BrasSec.app-main-50:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\drawable_logo_black.png.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\drawable\\logo_black.png"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/layout_layout_accessibility.xml.flat",
-        "source": "com.BrasSec.app-main-50:/layout/layout_accessibility.xml"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\drawable_logo_black4.png.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\drawable\\logo_black4.png"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.BrasSec.app-main-50:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.BrasSec.app-main-50:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\drawable_ic_icon1.png.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\drawable\\ic_icon1.png"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.BrasSec.app-main-50:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/xml_backup_rules.xml.flat",
-        "source": "com.BrasSec.app-main-50:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/xml_data_extraction_rules.xml.flat",
-        "source": "com.BrasSec.app-main-50:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.BrasSec.app-main-50:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.BrasSec.app-main-50:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.BrasSec.app-main-50:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.BrasSec.app-merged_res-48:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.BrasSec.app-main-50:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-merged_res-48:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\otavio g\\.gradle\\daemon\\8.0\\com.BrasSec.app-main-50:\\xml\\data_extraction_rules.xml"
     }
 ]
